@@ -28,76 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
-            gbCreating = new GroupBox();
-            btAdd = new Button();
-            cbCgender = new ComboBox();
-            tbCage = new TextBox();
-            tbCname = new TextBox();
-            tbCno = new TextBox();
+            gbEdit = new GroupBox();
+            btUpdate = new Button();
+            cbEgender = new ComboBox();
+            tbEage = new TextBox();
+            tbEname = new TextBox();
+            tbEno = new TextBox();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            gbCreating.SuspendLayout();
+            gbEdit.SuspendLayout();
             SuspendLayout();
             // 
-            // gbCreating
+            // gbEdit
             // 
-            gbCreating.BackColor = SystemColors.ActiveCaption;
-            gbCreating.Controls.Add(btAdd);
-            gbCreating.Controls.Add(cbCgender);
-            gbCreating.Controls.Add(tbCage);
-            gbCreating.Controls.Add(tbCname);
-            gbCreating.Controls.Add(tbCno);
-            gbCreating.Controls.Add(label4);
-            gbCreating.Controls.Add(label3);
-            gbCreating.Controls.Add(label2);
-            gbCreating.Controls.Add(label1);
-            gbCreating.Location = new Point(12, 12);
-            gbCreating.Name = "gbCreating";
-            gbCreating.Size = new Size(261, 174);
-            gbCreating.TabIndex = 5;
-            gbCreating.TabStop = false;
-            gbCreating.Text = "Creating";
+            gbEdit.BackColor = SystemColors.ActiveCaption;
+            gbEdit.Controls.Add(btUpdate);
+            gbEdit.Controls.Add(cbEgender);
+            gbEdit.Controls.Add(tbEage);
+            gbEdit.Controls.Add(tbEname);
+            gbEdit.Controls.Add(tbEno);
+            gbEdit.Controls.Add(label4);
+            gbEdit.Controls.Add(label3);
+            gbEdit.Controls.Add(label2);
+            gbEdit.Controls.Add(label1);
+            gbEdit.Location = new Point(12, 12);
+            gbEdit.Name = "gbEdit";
+            gbEdit.Size = new Size(261, 174);
+            gbEdit.TabIndex = 5;
+            gbEdit.TabStop = false;
+            gbEdit.Text = "Edit";
             // 
-            // btAdd
+            // btUpdate
             // 
-            btAdd.Location = new Point(174, 139);
-            btAdd.Name = "btAdd";
-            btAdd.Size = new Size(84, 31);
-            btAdd.TabIndex = 9;
-            btAdd.Text = "Add";
-            btAdd.UseVisualStyleBackColor = true;
+            btUpdate.Location = new Point(174, 139);
+            btUpdate.Name = "btUpdate";
+            btUpdate.Size = new Size(84, 31);
+            btUpdate.TabIndex = 9;
+            btUpdate.Text = "update";
+            btUpdate.UseVisualStyleBackColor = true;
             // 
-            // cbCgender
+            // cbEgender
             // 
-            cbCgender.FormattingEnabled = true;
-            cbCgender.Items.AddRange(new object[] { "Male", "Female" });
-            cbCgender.Location = new Point(75, 92);
-            cbCgender.Name = "cbCgender";
-            cbCgender.Size = new Size(154, 28);
-            cbCgender.TabIndex = 8;
+            cbEgender.FormattingEnabled = true;
+            cbEgender.Items.AddRange(new object[] { "Male", "Female" });
+            cbEgender.Location = new Point(75, 92);
+            cbEgender.Name = "cbEgender";
+            cbEgender.Size = new Size(154, 28);
+            cbEgender.TabIndex = 8;
             // 
-            // tbCage
+            // tbEage
             // 
-            tbCage.Location = new Point(75, 132);
-            tbCage.Name = "tbCage";
-            tbCage.Size = new Size(46, 27);
-            tbCage.TabIndex = 7;
+            tbEage.Location = new Point(75, 132);
+            tbEage.Name = "tbEage";
+            tbEage.Size = new Size(46, 27);
+            tbEage.TabIndex = 7;
             // 
-            // tbCname
+            // tbEname
             // 
-            tbCname.Location = new Point(75, 56);
-            tbCname.Name = "tbCname";
-            tbCname.Size = new Size(154, 27);
-            tbCname.TabIndex = 6;
+            tbEname.Location = new Point(75, 56);
+            tbEname.Name = "tbEname";
+            tbEname.Size = new Size(154, 27);
+            tbEname.TabIndex = 6;
             // 
-            // tbCno
+            // tbEno
             // 
-            tbCno.Location = new Point(75, 19);
-            tbCno.Name = "tbCno";
-            tbCno.Size = new Size(154, 27);
-            tbCno.TabIndex = 4;
+            tbEno.Location = new Point(75, 19);
+            tbEno.Name = "tbEno";
+            tbEno.Size = new Size(154, 27);
+            tbEno.TabIndex = 4;
+            tbEno.TextChanged += tbCno_TextChanged;
             // 
             // label4
             // 
@@ -140,24 +141,25 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(285, 198);
-            Controls.Add(gbCreating);
+            Controls.Add(gbEdit);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Edit";
             Text = "Edit";
-            gbCreating.ResumeLayout(false);
-            gbCreating.PerformLayout();
+            Load += Edit_Load;
+            gbEdit.ResumeLayout(false);
+            gbEdit.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private GroupBox gbCreating;
-        private Button btAdd;
-        private ComboBox cbCgender;
-        private TextBox tbCage;
-        private TextBox tbCname;
-        private TextBox tbCno;
+        private GroupBox gbEdit;
+        private Button btUpdate;
+        private ComboBox cbEgender;
+        private TextBox tbEage;
+        private TextBox tbEname;
+        private TextBox tbEno;
         private Label label4;
         private Label label3;
         private Label label2;

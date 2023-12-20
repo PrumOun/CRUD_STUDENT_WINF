@@ -145,6 +145,7 @@
             MinimizeBox = false;
             Name = "Creating";
             Text = "Creating";
+            Load += Creating_Load;
             gbCreating.ResumeLayout(false);
             gbCreating.PerformLayout();
             ResumeLayout(false);

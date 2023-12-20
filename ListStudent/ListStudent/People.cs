@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ListStudent;
+public delegate void StudentEventHandler(object? sender, People stud);
 public class People{
     public int No { get; set; } = default!;
     public String Name { get; set; } = default!;
@@ -14,7 +15,7 @@ public class People{
     public String Info => $"Name: {Name}, Genfer: {Gender}, Age: {Age},";
     //public static String Separate { get; set; } = "/";
     //private static int count = 0;
-    public static People createInstance(String data)
+    public static People? createInstance(String data)
     {
         String[] arr = data.Split("/");
         if (arr.Length < 4) return null;
